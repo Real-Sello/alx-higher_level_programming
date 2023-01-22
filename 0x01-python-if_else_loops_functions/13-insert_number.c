@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include "lists.h"
 
+/*
+ * insert_node - inserts a number into a sorted singly linked list
+ * @number: number to be added
+ * @head: list head
+ * Return: address of the new node, or NULL if it failed
+ */
+
 listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *node;
@@ -29,7 +36,7 @@ listint_t *insert_node(listint_t **head, int number)
 		*head = new_node;
 		return (new_node);
 	}
-	while(node)
+	while (node)
 	{
 		if (!node->next)
 			return (add_nodeint_end(head, number));
@@ -42,6 +49,6 @@ listint_t *insert_node(listint_t **head, int number)
 		}
 		node = node->next;
 	}
-	free(new_node)
+	free(new_node);
 	return (NULL);
 }
