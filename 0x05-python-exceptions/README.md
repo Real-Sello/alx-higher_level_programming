@@ -13,3 +13,11 @@ A brief description of what this project does and who it's for
 - All your files must be executable
 - The length of your files will be tested using `wc`
 
+## Authors
+
+- [@Real-Sello](https://github.com/Real-Sello) | ALX | Cohort 10
+
+## Copyright
+
+Sello Prince Moneatse &copy; 2023 | All Rights Reserved
+
