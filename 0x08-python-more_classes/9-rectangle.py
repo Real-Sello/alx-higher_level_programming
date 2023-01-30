@@ -101,4 +101,3 @@ class Rectangle:
     def square(cls, size=0):
         """Returns a new rectangle instance with width == height == size"""
         return Rectangle(size, size)
-        
