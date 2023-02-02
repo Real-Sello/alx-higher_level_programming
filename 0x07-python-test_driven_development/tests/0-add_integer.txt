@@ -52,6 +52,12 @@ Test: 'None' passed
         ...
         TypeError: a must be an integer
 
+Test: b as a non integer
+	>>> add_integer(15, [280])
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
 Test: a as variable, b as positive integer
         >>> add_integer(a, 4)
         Traceback (most recent call last):
