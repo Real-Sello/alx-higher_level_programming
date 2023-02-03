@@ -17,12 +17,12 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError('text must be a string')
 
-    l = len(text)
+    k = len(text)
     c = 0
     if text[0] == " ":
         while text[c] == " ":
             c += 1
-    while c < l:
+    while c < k:
         if text[c] == " " and text[c - 1] == ".":
             while text[c] == " ":
                 c += 1
