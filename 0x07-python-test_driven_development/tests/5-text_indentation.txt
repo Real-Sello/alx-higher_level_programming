@@ -1,0 +1,96 @@
+================================
+How to Use 5-text_indentation.py
+================================
+
+This module defines a text-indentation function ``text_indentation(text)``.
+
+Import function:
+        >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Usage Examples:
+Test: text as string with '.' in middle
+        >>> text_indentation("""Lorem ipsum. Dolor sit amet""")
+        Lorem ipsum.
+        <BLANKLINE>
+        Dolor sit amet
+
+Test: text as string with '.' in middle followed by several spaces
+        >>> text_indentation("""Lorem ipsum.      Dolor sit amet""")
+        Lorem ipsum.
+        <BLANKLINE>
+        Dolor sit amet
+
+Test: text as string with several '.' in middle
+        >>> text_indentation("""Lorem ipsum...Dolor sit amet""")
+        Lorem ipsum.
+        <BLANKLINE>
+        .
+        <BLANKLINE>
+        .
+        <BLANKLINE>
+        Dolor sit amet
+
+Test: text as string with several '.' in middle followed by space
+        >>> text_indentation("""Lorem ipsum. . . Dolor sit amet""")
+        Lorem ipsum.
+        <BLANKLINE>
+        .
+        <BLANKLINE>
+        .
+        <BLANKLINE>
+        Dolor sit amet
+
+Test: text as string with no '.' '?' ':'
+        >>> text_indentation("""Lorem ipsum Dolor sit amet""")
+        Lorem ipsum Dolor sit amet
+
+Test: text as string with '.' in middle and no space after
+        >>> text_indentation("""Lorem ipsum.Dolor sit amet""")
+        Lorem ipsum.
+        <BLANKLINE>
+        Dolor sit amet
+
+Test: text as string with many spaces before and afer '?'
+        >>> text_indentation("""Lorem ipsum     ?     Dolor sit amet""")
+        Lorem ipsum     ?
+        <BLANKLINE>
+        Dolor sit amet
+
+Test: text as string with many spaces in middle, no '.' '?' ':'
+        >>> text_indentation("""Lorem       ipsum? Dolor sit amet""")
+        Lorem       ipsum?
+        <BLANKLINE>
+        Dolor sit amet
+
+Test: text as string with '?', new line and many spaces in middle
+        >>> text_indentation("""Lorem ipsum? Dolor\n      sit amet""")
+        Lorem ipsum?
+        <BLANKLINE>
+        Dolor
+        sit amet
+
+Test: text as string with '?'at the end
+        >>> text_indentation("""Lorem ipsum?""")
+        Lorem ipsum?
+        <BLANKLINE>
+
+Test: text as string with spaces at beginning
+        >>> text_indentation("""     Lorem ipsum?""")
+        Lorem ipsum?
+        <BLANKLINE>
+
+Test: text as integer
+        >>> text_indentation(12)
+        Traceback (most recent call last):
+        ...
+        TypeError: text must be a string
+
+Test: text as number string
+        >>> text_indentation("""12""")
+        12
+
+Test: two strings
+        >>> text_indentation("""Lorem""", """ipsum""")
+        Traceback (most recent call last):
+        ...
+        TypeError: text_indentation() takes 1 positional argument but 2 were given
