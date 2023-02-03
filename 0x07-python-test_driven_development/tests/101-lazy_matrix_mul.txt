@@ -1,0 +1,29 @@
+=================================
+How to Use 101-lazy_matrix_mul.py
+=================================
+
+This module defines a matrix multiplication function
+``lazy_matrix_mul(m_a, m_b)``.
+
+Usage Example:
+m1 = np.array([[1, 2], [3, 4]])
+m2 = np.array([[5, 6], [7, 8]])
+
+try:
+    result = lazy_matrix_mul(m1, m2)
+    print("Result:", result)
+except LazyMatrixMultiplicationError as e:
+    print("Error:", e)
+
+# Result: [[19 22]
+# [43 50]]
+
+m3 = np.array([[1, 2, 3], [4, 5, 6]])
+
+try:
+    result = lazy_matrix_mul(m1, m3)
+    print("Result:", result)
+except LazyMatrixMultiplicationError as e:
+    print("Error:", e)
+
+# Error: Matrices are not multiplicable
