@@ -4,6 +4,7 @@
     from the specified class ; otherwise False
 """
 
+
 def inherits_from(obj, a_class):
     """Definnes a function that inherits"""
 
