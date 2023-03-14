@@ -12,7 +12,7 @@
 - A `README.md` file, at the root of the folder of the project, is mandatory
 - The length of your files will be tested using `wc`
 ## More Info
-## 33 Comments for your SQL file:
+## Comments for your SQL file:
 ```bash
 $ cat my_script.sql
 -- 3 first students in the Batch ID=3
@@ -56,7 +56,7 @@ $
 
   -   Ask for container Ubuntu 20.04
   -   Connect via SSH
-OR connect via the Web terminal
+  -   OR connect via the Web terminal
   -   In the container, you should start MySQL before playing with it:
 ```bash
 $ service mysql start                                                   
