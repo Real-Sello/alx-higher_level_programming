@@ -1,5 +1,5 @@
---lists all genres not linked to the show Dexter
---from the hbtn_0d_tvshows database
+-- lists all genres not linked to the show Dexter
+-- from the hbtn_0d_tvshows database
 SELECT name
 FROM tv_genres
 WHERE name NOT IN
