@@ -1,8 +1,7 @@
 # 0x0E. SQL - More queries
 `SQL` `MySQL`
-<hr>
-<img src="/images/SQLquerry.jpg">
-<hr>
+
+![img](images/SQLquerry.jpg)
 
 ## Requirements
 ## General
@@ -93,4 +92,4 @@ id  name
 8   Thriller
 $
 ```
-<img src="/images/morequeries.png">
+![img](images/morequeries.png)
