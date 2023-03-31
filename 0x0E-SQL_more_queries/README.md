@@ -1,7 +1,7 @@
 # 0x0E. SQL - More queries
 `SQL` `MySQL`
 <hr>
-<img src="/images/SQLquerries.jpg">
+<img src="/images/SQLquerry.jpg">
 <hr>
 
 ## Requirements
