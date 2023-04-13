@@ -12,5 +12,5 @@ function factorial (n) {
 process.argv.forEach((val, index) => {
   arg[index] = `${val}`;
 });
-fact = factorial(arg[2]);
+const fact = factorial(arg[2]);
 console.log(fact);
