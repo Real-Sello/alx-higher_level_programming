@@ -3,7 +3,6 @@
 the states table of hbtn_0e_0_usa where name matches the argument.
 """
 
-
 import MySQLdb
 import sys
 
@@ -24,7 +23,8 @@ if __name__ == '__main__':
 
     # execute SQL query to select all rows from states
     # table where name matches the state name argument, ordered by id
-    query = "SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY id ASC"
+    query = "SELECT * FROM states WHERE name LIKE BINARY %s\
+    ORDER BY id ASC".format(sys.argv[4])
     cursor.execute(query, ('%' + state_name + '%',))
 
     # iterate over query results and print each row
