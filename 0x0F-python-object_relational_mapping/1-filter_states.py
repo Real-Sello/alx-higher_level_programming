@@ -22,11 +22,13 @@ if __name__ == '__main__':
 
     # execute SQL query to select all states with names
     # starting with "N", ordered by id
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
-    # iterate over query results and print each row
-    for row in cursor.fetchall():
-        print(row)
+    # iterate over query results and print each row mathing the query
+    rows = cursor.fetchall()
+    for row in rows:
+        if row[1][0] == "N":
+            print(row)
 
     # close the database connection
     db.close()
