@@ -9,6 +9,7 @@ from sqlalchemy.ext.declarative import declarative_base
 # Create a declarative base instance
 Base = declarative_base()
 
+
 # Define the State class, which inherits from Base
 class State(Base):
     """
@@ -20,4 +21,3 @@ class State(Base):
     # Define the id and name columns
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
-
