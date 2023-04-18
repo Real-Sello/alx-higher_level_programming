@@ -13,11 +13,13 @@ Base = declarative_base()
 # Define the State class, which inherits from Base
 class State(Base):
     """
-    A class for linking the cities table.
+    A class for linking the States table.
     """
-    # Specify the name of the MySQL table that corresponds to the State class
+    # Specify the name of the MySQL table that corresponds
+    # to the State class
     __tablename__ = 'states'
 
     # Define the id and name columns
-    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
+    id = Column(Integer, primary_key=True, autoincrement=True,
+                nullable=False)
     name = Column(String(128), nullable=False)
