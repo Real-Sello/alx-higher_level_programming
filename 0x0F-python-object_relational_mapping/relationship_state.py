@@ -51,3 +51,13 @@ class City(Base):
 
     # Define the state_id foreign key
     state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
+
+
+if __name__ == '__main__':
+    # Create an engine and connect to the database
+    engine = create_engine(
+        'mysql+mysqldb://<username>:<password>@localhost:3306/<database_name>'
+        )
+
+    # Create all tables in the database
+    Base.metadata.create_all(engine)
