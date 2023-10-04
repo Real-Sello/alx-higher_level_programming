@@ -2,23 +2,23 @@
 
 const request = require('request');
 
-const apiURL = String(process.argv[2]);
-
+const apiURL = 'https://swapi-api.alx-tools.com/api/films/';
 const WA_URL = 'https://swapi-api.alx-tools.com/api/people/18/';
 
 request(apiURL, (error, response, body) => {
-  let count = 0;
   if (error) {
-    console.log(error);
-  } else {
-    let i = 0;
-    const movie = JSON.parse(body);
-    while (i < movie.results.length) {
-      if (movie.results[i].characters.includes(WA_URL)) {
-        count++;
-      }
-      i++;
-    }
+    console.error(error);
+    return;
   }
+
+  const films = JSON.parse(body).results;
+  let count = 0;
+
+  films.forEach((film) => {
+    if (film.characters.includes(WA_URL)) {
+      count++;
+    }
+  });
+
   console.log(count);
 });
